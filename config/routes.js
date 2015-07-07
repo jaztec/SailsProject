@@ -24,7 +24,7 @@ module.exports.routes = {
 
   /***************************************************************************
   *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+  * Make the view located at `views/homepage.jade` (or `views/homepage.jade`, *
   * etc. depending on your default view engine) your home page.              *
   *                                                                          *
   * (Alternatively, remove this and add an `index.html` file in your         *
@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,5 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  'post /user': 'UserController.create'
 };
