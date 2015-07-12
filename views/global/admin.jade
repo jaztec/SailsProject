@@ -1,21 +1,26 @@
+include ../global/mixins
 doctype html
 html
   head
     title Sails App Admin
 
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
-    link(rel="stylesheet" href="/styles/importer.css")
+    link(rel="stylesheet" href="/styles/admin.css")
+    link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Muli:400,400italic")
 
   body
 
     header
       nav
-        ul
+        ul.row.start
+          +menuItem('/admin', 'Home')
+          +menuItem('/admin/pages', 'Pages')
+          +menuItem('/admin/articles', 'Articles')
+          +menuItem('/', 'Website')
 
-
-    main
+    main.main-wrapper
       block content
 
-    footer
-      p &copy; Jaztec
+    footer.row.centered
+      p &copy; Jaztec 2012 - #{new Date().getFullYear()}
     script(src="/js/dependencies/sails.io.js")

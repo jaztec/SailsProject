@@ -6,14 +6,16 @@
  */
 
 module.exports = {
-	index: function (req, res)
-  {
+	index: function (req, res) {
     res.view('admin/index');
   },
 
-  some: function (req, res)
-  {
-    res.send('EN nu hier');
+  pages: function (req, res) {
+    res.view('admin/pages');
+  },
+
+  articles: function (req, res) {
+    res.view('admin/articles');
   }
 };
 

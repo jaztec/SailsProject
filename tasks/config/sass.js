@@ -3,12 +3,12 @@
  *
  * ---------------------------------------------------------------
  *
- * Only the `assets/styles/importer.less` is compiled.
+ * Only the `assets/styles/importer.sass` is compiled.
  * This allows you to control the ordering yourself, i.e. import your
  * dependencies, mixins, variables, resets, etc. before other stylesheets)
  *
  * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-less
+ * 		https://github.com/gruntjs/grunt-contrib-sass
  */
 module.exports = function(grunt) {
 
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			files: [{
 				expand: true,
 				cwd: 'assets/styles/',
-				src: ['importer.scss'],
+				src: ['importer.scss', 'admin.scss'],
 				dest: '.tmp/public/styles/',
 				ext: '.css'
 			}]
