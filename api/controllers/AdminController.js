@@ -15,7 +15,9 @@ module.exports = {
   },
 
   articles: function (req, res) {
-    res.view('admin/articles');
+    res.view('admin/articles', {
+      article: {content: 'Hello World'}
+    });
   }
 };
 

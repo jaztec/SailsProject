@@ -4,10 +4,10 @@
   display: flex;
 }
 
-@mixin flex($grow, $shrink, $basis) {
-  -ms-flex: $grow $shrink $basis;
-  -webkit-flex: $grow $shrink $basis;
-  flex: $grow $shrink $basis;
+@mixin flex($values) {
+  -ms-flex: $values;
+  -webkit-flex: $values;
+  flex: $values;
 }
 
 @mixin flexJustify($justify) {

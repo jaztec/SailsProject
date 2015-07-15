@@ -1,6 +1,4 @@
-@import 'mixins/flexbox';
-@import 'mixins/grid';
-@import 'mixins/transitions';
+@import "mixins/styles";
 
 $max-screen-width: 1280px;
 
@@ -61,6 +59,8 @@ nav {
     }
   }
 }
+
+
 
 @media (max-width: $max-screen-width) {
   .main-wrapper {

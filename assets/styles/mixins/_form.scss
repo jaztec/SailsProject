@@ -1,0 +1,17 @@
+@import "flexbox";
+
+form {
+
+  .form-element {
+
+    label {
+      display: inline-block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      margin-left: 10px;
+    }
+  }
+}

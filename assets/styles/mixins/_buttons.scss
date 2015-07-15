@@ -1,0 +1,27 @@
+@import "variables";
+@import "transitions";
+
+.button {
+  margin: $button-margin-top $button-margin-right $button-margin-bottom $button-margin-left;
+  padding: $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left;
+  border: none;
+  border-radius: 0;
+  @include transition(background-color, $button-transition-time, ease-out);
+  @include transition(box-shadow, $button-transition-time, ease-out);
+
+  &:hover, &:focus {
+    cursor: pointer;
+    @include transition(box-shadow, $button-transition-time, ease-out);
+  }
+
+  &.button-success {
+    background-color: $color-success;
+    color: #FFFFFF;
+
+    &:hover, &:focus, &.active {
+      @include transition(background-color, $button-transition-time, ease-out);
+      box-shadow: 0 0 20pt darken($color-success, $button-darken-percentage);
+      background-color: darken($color-success, $button-darken-percentage);
+    }
+  }
+}

@@ -1,5 +1,21 @@
 extends ../global/admin
 
+block header
+  script(type="text/javascript", src="/ckeditor/ckeditor.js")
+
 block content
   .row
     h1 Articles
+
+  .row.centered
+      form(method='post', enctype='multipart/form-data')
+
+        .form-element
+          label(for='content') Content
+          textarea#content.html-basic(name='content')= article.content
+
+        .form-element.row
+          button.button.button-success(type='submit') Save
+
+  script(type='text/javascript').
+    CKEDITOR.replaceAll(document.getElementsByClassName('html-basic'));
