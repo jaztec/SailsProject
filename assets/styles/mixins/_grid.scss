@@ -3,13 +3,14 @@
 @mixin row {
   @include flexContainer;
   @include flexDirection(row);
-  @include flexAlignItems(center);
+  @include flex(1 1 auto);
+  width: 100%;
 }
 
 @mixin column {
   @include flexContainer;
   @include flexDirection(column);
-  @include flexAlignItems(center);
+  @include flex(1 1 auto);
 }
 
 .row, .column {

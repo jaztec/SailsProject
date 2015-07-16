@@ -19,6 +19,11 @@ module.exports = {
       required: true
     },
 
+    slug: {
+      type: 'string',
+      required: true
+    },
+
     articles: {
       collection: 'article',
       via: 'page'

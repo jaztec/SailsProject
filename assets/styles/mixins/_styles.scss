@@ -4,3 +4,8 @@
 @import "form";
 @import "buttons";
 @import "variables";
+
+* {
+  font-size: $font-size;
+  line-height: $line-height;
+}

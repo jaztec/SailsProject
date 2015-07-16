@@ -1,17 +1,41 @@
 @import "flexbox";
+@import "variables";
+@import "transitions";
 
 form {
 
   .form-element {
 
     label {
-      display: inline-block;
-      font-weight: 600;
-      margin-bottom: 5px;
+      font-weight: 300;
+      margin: $form-margin-label-top $form-margin-label-right $form-margin-label-bottom $form-margin-label-left;
+      width: 100%;
+
+      span {
+        display: inline-block;
+      }
     }
 
     input, textarea {
-      margin-left: 10px;
+      display: inline-block;
+      margin: $form-margin-top $form-margin-right $form-margin-bottom $form-margin-left;
+      padding: 3pt;
+      width: 100%;
+      border: 1px solid $shadow-color;
+      border-radius: 0;
+    }
+
+    input {
+      height: $line-height;
+      @include transition(box-shadow, $button-transition-time, ease-out);
+      &:focus {
+        @include transition(box-shadow, $button-transition-time, ease-out);
+        box-shadow: 0 0 15pt 1pt $shadow-color;
+      }
+    }
+
+    textarea {
+      line-height: $line-height;
     }
   }
 }

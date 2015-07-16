@@ -1,0 +1,26 @@
+extends ../global/admin
+
+block content
+  .row
+    h1 Pages
+
+  .row
+    form.column.start(method="post", enctype="multipart/form-data")
+
+      .form-element
+        label(for="title")
+          span Title
+          input#title(name="title")= page.title
+
+      .form-element
+        label(for="description")
+          span Description
+          input#description(name="description")= page.description
+
+      .form-element
+        label(for="slug")
+          span URL
+          input#slug(name="slug")= page.slug
+
+      .form-element
+        button.button.button-success(type="submit") Save

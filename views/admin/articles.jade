@@ -7,14 +7,15 @@ block content
   .row
     h1 Articles
 
-  .row.centered
-      form(method='post', enctype='multipart/form-data')
+  .row
+      form.column.start(method='post', enctype='multipart/form-data')
 
         .form-element
-          label(for='content') Content
+          label(for='content')
+            span Content
           textarea#content.html-basic(name='content')= article.content
 
-        .form-element.row
+        .form-element
           button.button.button-success(type='submit') Save
 
   script(type='text/javascript').

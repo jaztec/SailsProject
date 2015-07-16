@@ -4,6 +4,7 @@
 .button {
   margin: $button-margin-top $button-margin-right $button-margin-bottom $button-margin-left;
   padding: $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left;
+  line-height: $line-height;
   border: none;
   border-radius: 0;
   @include transition(background-color, $button-transition-time, ease-out);
@@ -11,7 +12,11 @@
 
   &:hover, &:focus {
     cursor: pointer;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 20pt $shadow-color;
     @include transition(box-shadow, $button-transition-time, ease-out);
+    @include transition(background-color, $button-transition-time, ease-out);
   }
 
   &.button-success {
@@ -19,8 +24,6 @@
     color: #FFFFFF;
 
     &:hover, &:focus, &.active {
-      @include transition(background-color, $button-transition-time, ease-out);
-      box-shadow: 0 0 20pt darken($color-success, $button-darken-percentage);
       background-color: darken($color-success, $button-darken-percentage);
     }
   }

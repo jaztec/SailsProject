@@ -1,15 +1,42 @@
-$color-success: #1c931c;
+/**
+ * Colors
+ */
+$color-success: #1C931C;
+$color-error: #EC1D1D;
 $color-shadow: #1E1E1E;
+$shadow-color: #939393;
 
+/**
+ * Global styles
+ */
+$font-size: 1em;
+$line-height: 1.7em;
+
+/**
+ * Button styles
+ */
 $button-darken-percentage: 5%;
 $button-transition-time: .5s;
 
 $button-padding-top: 5px;
 $button-padding-bottom: 5px;
-$button-padding-left: 10px;
-$button-padding-right: 10px;
+$button-padding-left: 25px;
+$button-padding-right: 25px;
 
 $button-margin-top: 3px;
 $button-margin-bottom: 3px;
 $button-margin-left: 5px;
 $button-margin-right: 5px;
+
+/**
+ * Form styles
+ */
+$form-margin-bottom: 5px;
+$form-margin-top: 0;
+$form-margin-left: 10px;
+$form-margin-right: 0;
+
+$form-margin-label-bottom: 5px;
+$form-margin-label-top: 0;
+$form-margin-label-left: 0;
+$form-margin-label-right: 0;
